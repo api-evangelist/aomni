@@ -1,25 +1,63 @@
 aid: aomni
+
 name: Aomni
+
 description: 'Aomni is a company surfaced via the API Evangelist harvest backlog (source: vc-portfolio;
   backed by decibel) and added to the network as a stub for full-pipeline profiling.'
+
 url: https://raw.githubusercontent.com/api-evangelist/aomni/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-24 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-24'
+
 modified: '2026-10-24'
+
 tags:
 - Company
-apis: []
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-x-backed-by:
-- decibel
+
 common:
+- type: Hosts
+  url: hosts/aomni-hosts.yml
+- type: Vendors
+  url: vendors/aomni-vendors.yml
+- type: DomainSecurity
+  url: security/aomni-domain-security.yml
 - type: Website
   url: https://aomni.com
+
+apis: []
+
+x-backed-by:
+- decibel
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-10-24'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://aomni.com
+    status: 200
+x-enrichment:
+  date: '2026-10-24'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
